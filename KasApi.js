@@ -6,7 +6,8 @@ require('dotenv').config();
 
 const AMO_CONTRACT_ADDRESS  = '0x6e6c55ac20c41669261969089fad7f7fcd9ba690';
 const QUERY_SIZE            = 500;   // 한 번에 가져올 개수
-const PRESET                = 735; // KAS(KLAYTN API SERVICE)에 등록되어 있는 조회할 contract 정보 
+//const PRESET                = 735; // KAS(KLAYTN API SERVICE)에 등록되어 있는 조회할 contract 정보 
+const PRESET                = process.env.KAS_PRESET; // KAS(KLAYTN API SERVICE)에 등록되어 있는 조회할 contract 정보 
 
 class KasApi {
     static cursor;
